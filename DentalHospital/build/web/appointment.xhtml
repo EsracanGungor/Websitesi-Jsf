@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <h:head>
+        <title>Appointment Page</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+                   <ui:define name="content">
+                       <style>
+                           #content{
+                               background-color:white;
+                           }
+                       </style>
+                   <h:form>  
+                       
+                       <h1  style=" text-align:center; color:blueviolet; font-size:45px"><b/>MAKE AN APPOINTMENT</h1>
+                       <h:panelGrid style="margin-left:700px; margin-bottom:75px;">    
+              <h:graphicImage style=" vertical-align:middle;" library="images" name="randevu.jpg" width="500" height="350"></h:graphicImage>
+</h:panelGrid>
+      
+                          <h:panelGrid columns="3" style="margin-left:550px; font-size:35px; margin-bottom:30px;">
+                               <h:outputText value="Patient Name :"></h:outputText>
+           <h:inputText  id="nameInputText" value="#{appointment.patient_name}" required="true"  requiredMessage="Please enter your name"/> 
+           <h:message for="nameInputText"/>
+              <h:outputText value="Patient Surname :"></h:outputText>
+           <h:inputText id="surnameInputText" value="#{appointment.patient_surname}" required="true" requiredMessage="-Enter your surname"/> 
+           <h:message for="surnameInputText"/>
+        <h:outputText style=" font-size:25px;" value="The date you want to make an appointment(dd-mm-yyyy): "></h:outputText>
+        <h:inputText id="date" value="#{appointment.date}" required="true"
+                          requiredMessage="Please enter your a date." validatorMessage="Invalid date">
+              
+        </h:inputText>
+         <h:message for="date" style="color:red" />
+                             
+   </h:panelGrid>
+       
+      <h:panelGrid columns="2" style="margin-left:550px; margin-bottom:30px;">
+         
+        <h:outputText style=" font-size:25px; margin-bottom:30px;" value="Your country:"></h:outputText>
+        <h:selectOneMenu style=" font-size:25px;" value ="#{appointment.country}"  required="true"  requiredMessage="This area is necessary.Please select a country">
+        
+            <f:selectItem itemLabel="Turkey " itemValue="Turkey " />
+            <f:selectItem itemLabel="England " itemValue="England " />
+            <f:selectItem itemLabel="Italy " itemValue="Italy " />
+            <f:selectItem itemLabel="Canada " itemValue=" Canada" />
+            <f:selectItem itemLabel="Argentina " itemValue="Argentina " />
+            <f:selectItem itemLabel=" Mongolia" itemValue="Mongolia " />
+            <f:selectItem itemLabel="Egypt " itemValue="Egypt " />
+            <f:selectItem itemLabel="Indonesia " itemValue="Indonesia " />
+        </h:selectOneMenu>
+
+           <h:outputText style=" font-size:25px;" value="Your city        :"></h:outputText>
+         <h:selectOneMenu style=" font-size:25px;" value ="#{appointment.branch}"  required="true"  requiredMessage="This area is necessary.Please select a city">
+           
+             <f:selectItem itemLabel="Istanbul " itemValue="Istanbul " />
+            <f:selectItem itemLabel="Gaziantep " itemValue="Gaziantep " />
+            <f:selectItem itemLabel="London " itemValue="London " />
+            <f:selectItem itemLabel="Roma " itemValue="Roma " />
+            <f:selectItem itemLabel="Toronto " itemValue="Toronto " />
+            <f:selectItem itemLabel="Buenos Aires " itemValue="Buenos Aires " />
+            <f:selectItem itemLabel="Ulaanbaatar " itemValue="Ulaanbaatar " />
+            <f:selectItem itemLabel="Jakarta " itemValue="Jakarta " />
+            <f:selectItem itemLabel="Cairo " itemValue="Cairo " />
+        </h:selectOneMenu>
+       </h:panelGrid>
+                     
+           <h:panelGrid columns="1" style="margin-left:550px; margin-bottom:30px;">
+        <h:selectOneRadio style=" font-size:19px;" value ="#{appointment.treatment}" required="true"  requiredMessage="This area is necessary.Please select one branch">
+            <f:selectItem itemLabel="Root Treatment " itemValue="Root Treatment " />
+            <f:selectItem itemLabel="Tooth Extraction" itemValue="Tooth Extraction" />
+            <f:selectItem itemLabel="Tooth Filling" itemValue="Tooth Filling " />
+            <f:selectItem itemLabel="Dental Braces" itemValue="Dental Braces" />
+            <f:selectItem itemLabel="Tooth Whitening" itemValue="Tooth Whitening" />
+            <f:selectItem itemLabel="Paedodontics" itemValue="Paedodontics" />
+            <f:selectItem itemLabel="General Control " itemValue="General Control" />
+        </h:selectOneRadio>
+           </h:panelGrid>
+                      
+              <h:panelGrid columns="2" style="margin-left:550px; margin-bottom:30px;">
+
+      
+<h:commandButton style=" font-size:25px; color:white; background-color: #66afe9; margin-top:50px; margin-left:190px;" 
+                  value="Add Appointment"   action="#{appointment.ekle()}"/>
+<h:commandButton style=" font-size:25px; color:white; background-color: #66afe9; margin-top:50px; margin-left:100px;" 
+                  value="Reset" type="reset"/> 
+    </h:panelGrid>
+   
+                  
+   </h:form>  
+                       
+   
+      <h:outputLink style=" font-size:30px;
+                  margin-left:850px; margin-top:50px; " value="index.xhtml">HOME PAGE</h:outputLink>
+           </ui:define>
+       </ui:composition>
+    </h:body>
+
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+        
+    
+   <link rel="stylesheet" type ="text/css" href="css/bootstrap.min.css" />
+   <link rel="stylesheet" type ="text/css" href="css/ourValues.css" />
+      
+   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:4001" rel="stylesheet"></link>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"></link>
+      
+   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"/>
+    <h:head>
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+          <ui:define name="content"> 
+                 <style>
+                  #content{
+                      background-color: white;
+                  }
+              </style>
+              <h3>Find Doctor</h3>
+ <h:form>
+     <h:panelGrid columns="1">
+<h:outputText value="Doctor Name:"/>
+<br/>
+ <h:inputText id="isim" required="true"  requiredMessage="Enter a doctor name" value="#{doctorBean.bulunacak_doktor}" />
+ <br/>
+   <h:commandButton style="font-size:25px; color:white; background-color: #398439;" value="Find" action="findDoctor1"/>
+  <br/>
+  
+   <h:outputLink style="font-size:20px;" value="index.xhtml">Ana Sayfa</h:outputLink>
+ </h:panelGrid>
+ </h:form>
+                </ui:define>
+      </ui:composition> 
+    </h:body>
+</html>

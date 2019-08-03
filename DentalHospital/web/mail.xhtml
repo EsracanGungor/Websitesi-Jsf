@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>SEND MESSAGE</title> 
+
+      
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+          <ui:define name="content"> 
+                 <style>
+                  
+                  #content{
+                      background-color: white;
+                   
+                  }
+                              
+              </style>
+              
+         
+       <h:form>
+   <div class="form-group">
+<label>NAME:</label>
+<input type="name" class="form-control" id="name" placeholder="Please enter your name..." required="true" ></input>
+</div>
+
+<div class="form-group">
+<label>SURNAME:</label>
+<input type="surname" class="form-control" id="surname" placeholder="Please enter your surname..." required="true" requiredMessage="Enter your surname"></input>
+</div>
+
+<div class="form-group">
+<label>EMAIL:</label>
+<input type="email" class="form-control" id="email" placeholder="Example:ftm12@hotmail.com" required="true"></input>
+</div>
+
+<div class="form-group">
+<label>LEAVE A COMMENT</label>
+<input type="total" class="form-control" id="total" placeholder="This area is for your complaint and your request." required="true"></input>
+</div>
+
+ <a href="dilek.xhtml"><button type="button" class="btn btn-success btn-lg">SEND</button></a>
+
+</h:form>
+       </ui:define>
+      </ui:composition>    
+     
+    </h:body>
+</html>

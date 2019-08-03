@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         
+        <title>OUR DENTISTS  |  dentIST</title>
+   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:4001" rel="stylesheet"></link>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"></link>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"></link>
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+          <ui:define name="content"> 
+              <style>
+                  .graphicImage{
+                      padding-left:40px;
+                      padding-top: 40px;
+                      font-size:30%;
+                  }
+                  h1{
+                      color: blueviolet;
+                      font-size: 50px;
+                      font-style:italic;
+                   font-weight:45;
+                       
+                  }
+                  #content{
+                      background-color: bisque;
+                  }
+                  h2{
+                      margin-top: 5%;
+    font-family:sans-serif;
+    font-size:42px;
+    font-weight: 60;
+    margin-bottom:30px;
+    color:black;
+    text-align:left;
+                  }
+                  h3{
+                margin-top: 5%;
+               font-family:sans-serif;
+               font-size:42px;
+              font-weight: 60;
+              margin-bottom:30px;
+              color:black;
+              text-align:left;
+                  }
+                  
+              </style>
+              <h:form>
+                  <h:outputStylesheet library="css" name="ourValues.css"/>
+        
+        
+            <h1 align="center">OUR TEAM</h1>
+            <h:outputText style="font-style:italic; font-size:30px;" value="We are proud to serve you with our more than 5 thousand dentists."/>
+            <h:outputText style="font-style:italic; font-size:30px" value="Here are a few of our specialized dentists."/>
+            
+            <h:panelGrid columns="2">
+               
+            <h:graphicImage library="images" name="male3.jpg" style="column-gap:40px;" />                            
+            <h2>Mustafa YAZICI</h2>
+            <h3>Dental Specialist</h3>
+            <h:outputText style=" font-size:30px;" value="Our dentist who has a great experience accumulated over many years, serves in the fields of root treatment and filling in our dental hospital located in Fatih." />
+            <br/>
+            <h:graphicImage library="images" name="female1.jpg" />                           
+            <h2>Almıla CIFTCI</h2>
+            <h3>Pediatric Dentist</h3>
+            <h:outputText style=" font-size:30px;" value=" Our dentist specializing in pediatric dentistry, one of Turkey's best dentist to provide the best service to children trying to do the best she can."/>
+             <br/>
+            <h:graphicImage library="images" name="male2.jpg" />                           
+            <h2>Federico BRUGNAMI</h2>
+            <h3>Specialist Periodontist</h3>
+            <h:outputText style=" font-size:30px;" value="Dr Brugnami is one of the few clinicians in Europe who is currently Wilckodontics and is a leader,not only in Europe, on the application of this treatment in numerous cases" />
+            <br/>
+            <h:graphicImage library="images"  name="male3.jpg" />                           
+            <h2>Prof. Francesco MANNOCCI</h2>
+            <h3>Specialist in Endodontics</h3>
+            <h:outputText style="font-size:30px;" value="Professor Mannocci is a Specialist in Endodontics and Restorative Dentistry.He obtained his MD (Pisa, Italy, 1986) and DDS (Pisa, 1990) in Italy,and his PhD in Clinical Dentistry from King's College London in 2001."/>
+            <br/>
+            <h:graphicImage library="images"  name="female2.jpg" />                           
+            <h2>Adrie ABIDIN</h2>
+            <h3>Specialist in Endodontics</h3>
+            <h:outputText style=" font-size:30px;" value="Not only has Benny a very nice personality, he is also a very skillful dentist.A US graduate dentist, will be happy to see you in our clinic in Jakarta " />
+            <br/>
+            <h:graphicImage library="images" name="male2.jpg" />                           
+            <h2>Mariano MORGANTE</h2>
+            <h3>Implantology</h3>
+            <h:outputText style=" font-size:30px;" value="In over 15 years, he has been practising his profession in all of its areas,specialising in Implantology, Bone Regeneration and Oral Rehabilitation. Every year,he attends International congresses and courses. He has placed and rehabilitated more than 5.000 implants during his career." />
+            <br/>
+            <h:graphicImage library="images"  name="female3.jpg" />                           
+            <h2>Jane HALKIOTIS</h2>
+            <h3>Dental Care Education</h3>
+            <h:outputText style=" font-size:30px;" value="Dr. Halkiotis’ full-time private practice is helping her patients achieve and maintain healthy and attractive smiles for 25 years.  She is dedicated and committed to providing her patients with exceptional oral care, using a comprehensive, conservative, non-invasive approach.  "/>
+            <br/>
+         </h:panelGrid>
+     </h:form>
+                </ui:define>
+      </ui:composition> 
+    </h:body>
+</html>

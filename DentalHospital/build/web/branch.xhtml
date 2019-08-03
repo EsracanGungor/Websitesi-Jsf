@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>OUR BRANCHES</title>
+       
+        
+   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:4001" rel="stylesheet"></link>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"></link>
+      
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"></link>
+       
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="content">
+                  <style>
+                  .graphicImage{
+                      padding-left:40px;
+                      padding-top: 40px;
+                      font-size:30%;
+                  }
+                  h1{
+                      
+                      font-size: 50px;
+                      font-style:italic;
+                   font-weight:45;
+                      color:blueviolet !important;
+                  }
+                  h2{
+                      font-size: 50px;
+                      font-style:italic;
+                   font-weight:45;
+                      color:black;
+                     text-align:left;
+                  }
+                  #content{
+                      background-color: white;
+                  }
+                  
+                                   
+              </style>
+ <h1 align="center" style="color:blueviolet">BRANCHES</h1>
+                <h:panelGrid columns="2">
+        <h:graphicImage library="images" name="istanbul.png"></h:graphicImage>
+        <h1>ISTANBUL</h1>
+        <h2>Turkey</h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch1}" escape="false"/>
+
+        <h:graphicImage library="images" name="antep.JPG"></h:graphicImage>
+        <h1>GAZIANTEP</h1>
+        <h2>Turkey</h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch2}" escape="false"/>
+        
+
+       
+        <h:graphicImage library="images" name="londra.JPG"></h:graphicImage>
+        <h1>LONDON</h1>
+        <h2>England</h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch3}" escape="false"/>
+
+
+        <h:graphicImage library="images" name="roma.JPG"></h:graphicImage>
+        <h1>ROMA</h1>
+        <h2>Italy</h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch4}" escape="false"/>
+
+        <h:graphicImage library="images" name="toronto.JPG"></h:graphicImage>
+        <h1>TORONTO</h1>
+        <h2>Canada</h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch5}" escape="false"/>
+
+        <h:graphicImage library="images" name="buenosaires.JPG"></h:graphicImage>
+        <h1>BUENOS AIRES</h1>
+        <h2>Argentina</h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch6}" escape="false"/>
+
+        <h:graphicImage library="images" name="ulanbator.JPG"></h:graphicImage>
+        <h1>ULAANBATOR</h1>
+        <h2> Mongolia </h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch7}" escape="false"/>
+
+        <h:graphicImage library="images" name="kahire.JPG"></h:graphicImage>
+        <h1>CAIRO</h1>
+        <h2>Egypt</h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch8}" escape="false"/>
+
+        <h:graphicImage library="images" name="jakarta.JPG"></h:graphicImage>
+       
+        <h1>JAKARTA</h1>
+        <h2>Indonesia</h2>
+        <h:outputText style="font-size:30px;" value="#{msg.branch9}" escape="false"/>
+
+
+ </h:panelGrid>
+            </ui:define>
+       
+        </ui:composition> 
+    </h:body>
+</html>

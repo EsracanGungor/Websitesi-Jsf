@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <title>Register Page</title>
+    </h:head>
+        <h:body>
+        <ui:composition template="template/template.xhtml">
+                   <ui:define name="content">
+                        <style>
+                  #content{
+                      background-color: white;
+                  }      
+              </style>
+                       <h:form>           
+               <h:panelGrid columns="3"  style="font-size:35px;">
+
+         <h:outputText   value="Identification Number:"></h:outputText>
+         <h:inputText   id="ID" value="#{user.idNumber}"  required="true"
+                       requiredMessage="This area is necessary.Please enter your identification number!" maxlength="15"/>
+         <h:message for="ID"/>
+              
+         
+           <h:outputText value="Name :"></h:outputText>
+           <h:inputText  id="nameInputText" value="#{user.name}" required="true"  requiredMessage="Please enter your name"/> 
+           <h:message for="nameInputText"/>
+              <h:outputText value="Surname :"></h:outputText>
+           <h:inputText  style="font-size:35px;" id="surnameInputText" value="#{user.surname}" required="true" requiredMessage="-Enter your surname"/> 
+           <h:message for="surnameInputText"/>
+           
+           <h:selectOneRadio style=" font-size:25px;" value ="#{user.gender}">
+              <f:selectItem itemLabel="Woman " itemValue="Woman " />
+              <f:selectItem itemLabel="Man" itemValue="Man" />
+            </h:selectOneRadio>
+      
+           </h:panelGrid>
+                           <h:panelGrid columns="2" style="font-size:35px;">
+           <h:outputText value="Birthdate(dd-mm-yyyy):"></h:outputText>
+           <h:inputText  value="#{user.birthdate}"  required="true"  requiredMessage="This area is necessary.Please enter your birthdate!">
+        
+           </h:inputText>
+
+           <h:outputText value="Cellphone:"></h:outputText>
+           <h:inputText  value="#{user.cellphone}"  required="true"  
+                         requiredMessage="This area is necessary.Enter your phone number1" maxlength="15"></h:inputText>
+
+               <h:outputText style="font-size:35px;" value="Password:" ></h:outputText>
+               <h:inputSecret style="font-size:35px;" id="password" value = "#{user.password}" required="true"
+                              requiredMessage="Please enter your password."
+                              validatorMessage="Enter a longer password for a stronger password."><br/>
+                   <f:validateLength maximum="12" minimum="5" />
+               </h:inputSecret>
+       
+</h:panelGrid>
+         <h:selectBooleanCheckbox value="#{user.checkIt}" />
+         <h:outputText  style="font-size:20px;" value="I have read and understood the new Terms of Service and Privacy Policy."></h:outputText>
+         <br/>
+         <h:commandButton style="font-size:25px; color:white; background-color:cornflowerblue;" action="#{user.add}"  value="SEND"></h:commandButton>  
+
+        </h:form>
+           </ui:define>
+       </ui:composition>
+    </h:body>
+</html>

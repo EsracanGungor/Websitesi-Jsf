@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>Error</title>
+</h:head>
+<h:body>
+    <ui:composition template="template/template.xhtml">
+          <ui:define name="content"> 
+                 <style>
+                  
+                  #content{
+                      background-color: white;
+                   
+                  }
+                              
+              </style>  
+    <f:view>
+        <p>
+            <b style=" font-size: 30px;">Sorry, either id or password is incorrect please try again</b>
+        </p>
+        <p>
+            <h:outputLink style=" font-size: 30px;" value="login.xhtml">Login Again</h:outputLink>
+        </p>
+    </f:view>
+     </ui:define>
+      </ui:composition>    
+     
+</h:body>
+</html>
